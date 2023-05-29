@@ -21,10 +21,6 @@ body {
   justify-content: center;
 }
 
-.text-container {
-    word-wrap: break-word;
-}
-
 .form-control {
   border: 1px solid var(--text-inactive);
   font-size: 14px;
