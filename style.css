@@ -202,10 +202,11 @@ h5 {
 
 .list-group-item .text-container {
   overflow: hidden;
-  white-space: nowrap;
   text-overflow: ellipsis;
   flex-grow: 1;
   font-size: 14px;
+  overflow-wrap: break-word;
+  word-break: break-word;
 }
 
 .text-container {
