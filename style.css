@@ -1,0 +1,309 @@
+body {
+  margin: 0;
+  padding: 0;
+  background-color: var(--primary);
+  font-family: "Poppins", sans-serif;
+}
+
+:root {
+  --primary: #fff;
+  --secondary: #6ac8ff;
+  --tertiary: #10dfb9;
+  --quaternary: #769aff;
+  --quinary: #fa8a6b;
+  --text-inactive: #d4d4d4;
+  --text-active: #5a6b85;
+  --text-color: #2a3646;
+}
+
+.image {
+  display: flex;
+  justify-content: center;
+}
+
+.form-control {
+  border: 1px solid var(--text-inactive);
+  font-size: 14px;
+}
+
+.date {
+  border: 1px solid var(--text-inactive);
+  padding-left: 15px;
+  padding-right: 10px;
+  color: var(--text-color);
+}
+
+.image > img {
+  width: 20%;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.btn {
+  background-color: var(--quaternary);
+  color: white;
+  font-size: 14px;
+}
+
+.btn:hover {
+  background-color: var(--text-color);
+  color: white;
+}
+
+.container {
+  width: 70%;
+  /* min-width: 768px; */
+  margin: 100px auto;
+  padding: 40px;
+  background-color: var(--primary);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+  border-color: var(--text-active);
+}
+
+@media (max-width: 768px) {
+  .container {
+    width: 85%;
+  }
+}
+
+
+
+
+h1 {
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  color: var(--quinary);
+  font-family: "Kalam", cursive;
+}
+
+h5 {
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  color: darkgrey;
+  font-family: "Kalam", cursive;
+}
+
+.background-circle {
+  position: fixed;
+  top: 20%;
+  right: 0;
+  width: 15%;
+  padding-bottom: 15%;
+  border-radius: 50%;
+  background-color: var(--secondary);
+  z-index: -1;
+  transform: translate(-30%, 0);
+  -webkit-transform: translate(-30%, 0);
+  -moz-transform: translate(-30%, 0);
+  -ms-transform: translate(-30%, 0);
+  -o-transform: translate(-30%, 0);
+}
+
+
+.background-circle-bottom {
+  position: fixed;
+  bottom: -10%;
+  left: 0;
+  width: 20%;
+  padding-bottom: 20%;
+  border-radius: 50%;
+  background-color: var(--quaternary);
+  z-index: -1;
+  transform: translate(-30%, 0);
+  -webkit-transform: translate(-30%, 0);
+  -moz-transform: translate(-30%, 0);
+  -ms-transform: translate(-30%, 0);
+  -o-transform: translate(-30%, 0);
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+}
+
+.list-group {
+  margin-top: 30px;
+}
+
+.msg {
+  color: var(--text-color);
+  font-size: 14px;
+}
+
+.list-group-item {
+  position: relative;
+  padding-left: 2.5rem;
+}
+
+.list-group-item {
+  display: flex;
+  align-items: center;
+}
+
+.item-container {
+  display: flex;
+  align-items: center;
+  flex-grow: 1;
+}
+
+.fa-xmark {
+  margin-right: 20px;
+  color: var(--secondary);
+}
+
+.fa-check {
+  cursor: pointer;
+  color: var(--secondary);
+}
+
+.fa-check:hover,
+.fa-xmark:hover {
+  cursor: pointer;
+  color: var(--text-color);
+}
+
+.list-group-item .delete-icon,
+.list-group-item .fa-circle,
+.list-group-item .fa-circle-check {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+}
+
+.list-group-item .delete-icon {
+  right: 0.8rem;
+  padding-left: 20px;
+
+  color: var(--secondary);
+}
+
+.list-group-item .delete-icon:hover {
+  color: var(--text-color);
+}
+
+.list-group-item .fa-circle,
+.list-group-item .fa-circle-check {
+  color: var(--secondary);
+  left: 0.8rem;
+}
+.list-group-item .fa-circle-check:hover,
+.list-group-item .fa-circle:hover {
+  color: var(--text-color);
+}
+
+.list-group-item .text-container {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  flex-grow: 1;
+  font-size: 14px;
+}
+
+.text-container {
+  outline: none;
+}
+
+.done {
+  font-style: italic;
+  color: var(--text-inactive);
+}
+
+/* start -- custom confirm screen for delete button */
+
+.custom-confirm {
+  position: fixed;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  padding: 30px 30px;
+  border-radius: 10px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+  z-index: 9999;
+  display: none;
+  color: var(--text-color);
+  font-size: 14px;
+  text-align: center;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+}
+
+.confirm-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.buttons {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+.confirm-button,
+.cancel-button {
+  margin: 0 5px;
+}
+
+.confirm-button {
+  color: var(--text-color);
+  font-size: 14px;
+  border: none;
+  border-color: var(--tertiary);
+  border-radius: 4px;
+  padding: 5px 10px;
+  cursor: pointer;
+}
+
+.cancel-button {
+  color: white;
+  font-size: 14px;
+  border: none;
+  background-color: var(--tertiary);
+  border: none;
+  border-radius: 4px;
+  padding: 5px 10px;
+  cursor: pointer;
+}
+
+.confirm-button:hover,
+.cancel-button:hover {
+  background-color: var(--text-active);
+  color: white;
+  border: none;
+}
+
+/* end -- custom confirm screen for delete button */
+.form-select {
+  width: 15%;
+  font-size: 14px;
+}
+.low-icon {
+  background-color: var(--quaternary);
+  margin-left: 4px;
+  font-weight: 100;
+}
+
+.medium-icon {
+  background-color: var(--secondary);
+  font-weight: 100;
+}
+
+.high-icon {
+  background-color: var(--quinary);
+  font-weight: 100;
+}
+
+.badges {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-right: 16px;
+  gap: 2px;
+  cursor: pointer;
+}
