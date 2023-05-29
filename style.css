@@ -22,7 +22,7 @@ body {
 }
 
 .text-container {
-  white-space: normal;
+    word-wrap: break-word;
 }
 
 .form-control {
