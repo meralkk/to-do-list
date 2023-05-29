@@ -21,6 +21,11 @@ body {
   justify-content: center;
 }
 
+.text-container {
+  overflow-wrap: break-word;
+  word-break: break-word;
+}
+
 .form-control {
   border: 1px solid var(--text-inactive);
   font-size: 14px;
